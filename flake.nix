@@ -6,7 +6,7 @@
     let pkgs = nixpkgs.legacyPackages.${system}; in
     {
       devShells.haskell = pkgs.mkShell {
-        packages = with pkgs; [ ghc haskell-language-server haskellPackages.QuickCheck ];
+        packages = with pkgs; [ ghc haskell-language-server stack ];
       };
     }
   );
