@@ -1,5 +1,28 @@
 {
   "nodes": {
+    "circuitflow": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1637837510,
+        "narHash": "sha256-Q4itJRnk0iAyvWjpBo8QpxfZR9AyIIpmsVcMx9iYW3I=",
+        "owner": "rosehuds",
+        "repo": "CircuitFlow",
+        "rev": "ae5c1bed81f54bcc97703028ab85d719a66ffcae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rosehuds",
+        "repo": "CircuitFlow",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1631561581,
@@ -33,6 +56,7 @@
     },
     "root": {
       "inputs": {
+        "circuitflow": "circuitflow",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
       }
