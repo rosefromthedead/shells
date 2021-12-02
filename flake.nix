@@ -16,7 +16,7 @@
     in
     {
       devShells.haskell = pkgs.mkShell {
-        packages = with pkgs; [ ghc-with-packages haskell-language-server ];
+        packages = with pkgs; [ ghc-with-packages cabal-install haskell-language-server ];
       };
     }
   );
