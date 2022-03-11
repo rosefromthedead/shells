@@ -20,7 +20,7 @@
         packages = with pkgs; [ ghc-with-packages cabal-install haskell-language-server ];
       };
       devShells.java = pkgs.mkShell {
-        packages = with pkgs; [ jdk11 jdtls maven ];
+        packages = with pkgs; [ jdk jdtls maven ];
       };
     }
   );

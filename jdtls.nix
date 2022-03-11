@@ -2,7 +2,7 @@
 , stdenv
 , fetchurl
 , makeWrapper
-, jdk11
+, jdk
 }:
 
 stdenv.mkDerivation rec {
