@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   sourceRoot = ".";
 
   buildInputs = [
-    jdk11
+    jdk
   ];
 
   nativeBuildInputs = [
@@ -72,7 +72,7 @@ stdenv.mkDerivation rec {
       #     This can be overidden by specifying -configuration to the wrapper.
       #
       # Java options, such as -Xms and Xmx can be specified by setting JAVA_OPTS.
-      makeWrapper ${jdk11}/bin/java $out/bin/jdt-language-server \
+      makeWrapper ${jdk}/bin/java $out/bin/jdt-language-server \
         --run "mkdir -p ${runtimePath}" \
         --run "install -Dm 1777 -t ${runtimePath}/config $out/share/config/*" \
         --add-flags "-Declipse.application=org.eclipse.jdt.ls.core.id1" \
