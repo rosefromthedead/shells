@@ -13,10 +13,14 @@
       ghc-with-packages = pkgs.haskellPackages.ghcWithPackages (pkgs:
         [ pkgs.QuickCheck circuitflow.packages.${system}.CircuitFlow ]
       );
+      jdtls = pkgs.callPackage ./jdtls.nix {};
     in
     {
       devShells.haskell = pkgs.mkShell {
         packages = with pkgs; [ ghc-with-packages cabal-install haskell-language-server ];
+      };
+      devShells.java = pkgs.mkShell {
+        packages = with pkgs; [ jdk11 jdtls maven ];
       };
     }
   );
